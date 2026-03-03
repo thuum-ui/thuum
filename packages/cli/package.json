@@ -1,0 +1,24 @@
+{
+  "name": "@thuum-ui/cli",
+  "version": "0.1.0",
+  "type": "module",
+  "bin": {
+    "thuum": "./dist/index.js"
+  },
+  "scripts": {
+    "build": "tsup",
+    "dev": "tsup --watch"
+  },
+  "dependencies": {
+    "commander": "^13.0.0",
+    "@clack/prompts": "^0.9.0",
+    "zod": "^3.24.0",
+    "ts-morph": "^25.0.0",
+    "picocolors": "^1.1.0"
+  },
+  "devDependencies": {
+    "tsup": "^8.3.0",
+    "typescript": "^5.7.0",
+    "@types/node": "^22.0.0"
+  }
+}

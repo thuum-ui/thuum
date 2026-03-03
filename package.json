@@ -1,0 +1,14 @@
+{
+  "name": "thuum",
+  "private": true,
+  "workspaces": ["packages/*", "apps/*"],
+  "scripts": {
+    "build:registry": "bun run --cwd packages/registry build",
+    "copy:registry": "cp -r packages/registry/dist/ apps/docs/public/r/",
+    "build:cli": "bun run --cwd packages/cli build",
+    "clean:docs": "rm -rf apps/docs/.astro apps/docs/node_modules/.astro apps/docs/dist",
+    "build:docs": "bun run clean:docs && bun run --cwd apps/docs build",
+    "build": "bun run build:registry && bun run copy:registry && bun run build:cli && bun run build:docs",
+    "dev": "bun run --cwd apps/docs dev"
+  }
+}

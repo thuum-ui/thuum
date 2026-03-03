@@ -1,0 +1,12 @@
+{
+  "name": "@thuum-ui/registry",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    "build": "bun run scripts/build-registry.ts"
+  },
+  "devDependencies": {
+    "typescript": "^5.7.0"
+  }
+}
