@@ -1,0 +1,59 @@
+---
+title: Card
+description: A container component for grouping related content.
+---
+
+import { CardPreview } from "../../../components/previews/CardPreview";
+import ComponentPreview from "../../../components/ComponentPreview.astro";
+import InstallCommand from "../../../components/InstallCommand.astro";
+
+## Preview
+
+<ComponentPreview name="card">
+  <CardPreview client:load />
+</ComponentPreview>
+
+## Installation
+
+<InstallCommand component="card" />
+
+## Usage
+
+```tsx
+import {
+  Card,
+  CardHeader,
+  CardTitle,
+  CardDescription,
+  CardContent,
+  CardFooter,
+} from "@/components/ui/card";
+
+export function MyComponent() {
+  return (
+    <Card>
+      <CardHeader>
+        <CardTitle>Quest Log</CardTitle>
+        <CardDescription>Your active quests</CardDescription>
+      </CardHeader>
+      <CardContent>
+        <p>Defeat the World-Eater Alduin.</p>
+      </CardContent>
+      <CardFooter>
+        <Button>Track Quest</Button>
+      </CardFooter>
+    </Card>
+  );
+}
+```
+
+## Sub-components
+
+| Component         | Description                          |
+| ----------------- | ------------------------------------ |
+| `Card`            | Root container                       |
+| `CardHeader`      | Top section with title/description   |
+| `CardTitle`       | Heading text                         |
+| `CardDescription` | Secondary description text           |
+| `CardContent`     | Main content area                    |
+| `CardFooter`      | Bottom section for actions           |

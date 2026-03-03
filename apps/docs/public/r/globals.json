@@ -1,0 +1,12 @@
+{
+  "name": "globals",
+  "type": "registry:css",
+  "dependencies": [],
+  "registryDependencies": [],
+  "files": [
+    {
+      "path": "globals.css",
+      "content": "@import \"tailwindcss\";\n\n@theme {\n  /* Skyrim-inspired color tokens */\n  --color-background: oklch(0.14 0.004 285);\n  --color-foreground: oklch(0.93 0.01 80);\n\n  --color-muted: oklch(0.22 0.006 285);\n  --color-muted-foreground: oklch(0.65 0.01 80);\n\n  --color-card: oklch(0.17 0.005 285);\n  --color-card-foreground: oklch(0.93 0.01 80);\n\n  --color-popover: oklch(0.17 0.005 285);\n  --color-popover-foreground: oklch(0.93 0.01 80);\n\n  --color-primary: oklch(0.68 0.12 55);\n  --color-primary-foreground: oklch(0.14 0.004 285);\n\n  --color-secondary: oklch(0.25 0.008 285);\n  --color-secondary-foreground: oklch(0.93 0.01 80);\n\n  --color-accent: oklch(0.55 0.15 30);\n  --color-accent-foreground: oklch(0.93 0.01 80);\n\n  --color-destructive: oklch(0.55 0.2 25);\n  --color-destructive-foreground: oklch(0.93 0.01 80);\n\n  --color-border: oklch(0.3 0.01 285);\n  --color-input: oklch(0.25 0.008 285);\n  --color-ring: oklch(0.68 0.12 55);\n\n  --radius-sm: 0.125rem;\n  --radius-md: 0.375rem;\n  --radius-lg: 0.5rem;\n  --radius-xl: 0.75rem;\n\n  --font-sans: \"Inter\", ui-sans-serif, system-ui, sans-serif;\n}\n\n@layer base {\n  * {\n    @apply border-border;\n  }\n\n  body {\n    @apply bg-background text-foreground;\n  }\n}\n"
+    }
+  ]
+}

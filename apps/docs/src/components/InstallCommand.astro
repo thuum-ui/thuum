@@ -1,0 +1,11 @@
+---
+interface Props {
+  component: string;
+}
+
+const { component } = Astro.props;
+---
+
+<div class="not-content my-4">
+  <pre class="rounded-lg border border-[oklch(0.3_0.01_285)] bg-[oklch(0.14_0.004_285)] p-4"><code>npx thuum add {component}</code></pre>
+</div>

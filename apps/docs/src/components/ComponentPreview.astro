@@ -1,0 +1,13 @@
+---
+interface Props {
+  name: string;
+}
+
+const { name } = Astro.props;
+---
+
+<div class="not-content my-6 rounded-lg border border-[oklch(0.3_0.01_285)] bg-[oklch(0.17_0.005_285)] p-6">
+  <div class="flex min-h-[120px] items-center justify-center">
+    <slot />
+  </div>
+</div>

@@ -1,0 +1,44 @@
+[
+  {
+    "name": "utils",
+    "type": "registry:lib",
+    "dependencies": [
+      "clsx",
+      "tailwind-merge"
+    ],
+    "registryDependencies": []
+  },
+  {
+    "name": "globals",
+    "type": "registry:css",
+    "dependencies": [],
+    "registryDependencies": []
+  },
+  {
+    "name": "button",
+    "type": "registry:ui",
+    "dependencies": [
+      "class-variance-authority",
+      "@radix-ui/react-slot"
+    ],
+    "registryDependencies": [
+      "utils"
+    ]
+  },
+  {
+    "name": "input",
+    "type": "registry:ui",
+    "dependencies": [],
+    "registryDependencies": [
+      "utils"
+    ]
+  },
+  {
+    "name": "card",
+    "type": "registry:ui",
+    "dependencies": [],
+    "registryDependencies": [
+      "utils"
+    ]
+  }
+]

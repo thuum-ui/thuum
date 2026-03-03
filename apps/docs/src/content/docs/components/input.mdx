@@ -1,0 +1,38 @@
+---
+title: Input
+description: A styled text input component.
+---
+
+import { InputPreview } from "../../../components/previews/InputPreview";
+import ComponentPreview from "../../../components/ComponentPreview.astro";
+import InstallCommand from "../../../components/InstallCommand.astro";
+
+## Preview
+
+<ComponentPreview name="input">
+  <InputPreview client:load />
+</ComponentPreview>
+
+## Installation
+
+<InstallCommand component="input" />
+
+## Usage
+
+```tsx
+import { Input } from "@/components/ui/input";
+
+export function MyComponent() {
+  return <Input placeholder="Enter your name, Dragonborn..." />;
+}
+```
+
+## Props
+
+The `Input` component accepts all standard HTML input attributes.
+
+```tsx
+<Input type="email" placeholder="dovahkiin@skyrim.com" />
+<Input disabled placeholder="Cannot edit" />
+<Input type="password" placeholder="Secret passphrase" />
+```

@@ -1,0 +1,58 @@
+---
+title: Button
+description: A versatile button component with multiple variants and sizes.
+---
+
+import { ButtonPreview } from "../../../components/previews/ButtonPreview";
+import ComponentPreview from "../../../components/ComponentPreview.astro";
+import InstallCommand from "../../../components/InstallCommand.astro";
+
+## Preview
+
+<ComponentPreview name="button">
+  <ButtonPreview client:load />
+</ComponentPreview>
+
+## Installation
+
+<InstallCommand component="button" />
+
+## Usage
+
+```tsx
+import { Button } from "@/components/ui/button";
+
+export function MyComponent() {
+  return <Button variant="default">Fus Ro Dah</Button>;
+}
+```
+
+## Variants
+
+| Variant       | Description                        |
+| ------------- | ---------------------------------- |
+| `default`     | Primary golden button              |
+| `secondary`   | Subtle dark button                 |
+| `destructive` | Red danger button                  |
+| `outline`     | Bordered transparent button        |
+| `ghost`       | No background until hover          |
+| `link`        | Styled as an underlined link       |
+
+## Sizes
+
+| Size      | Description          |
+| --------- | -------------------- |
+| `default` | Standard height (40px) |
+| `sm`      | Compact (36px)         |
+| `lg`      | Large (44px)           |
+| `icon`    | Square icon button     |
+
+## As Child
+
+Use the `asChild` prop to render as a different element (e.g., a link):
+
+```tsx
+<Button asChild>
+  <a href="/quests">View Quests</a>
+</Button>
+```

@@ -1,0 +1,58 @@
+---
+title: Installation
+description: Set up Thu'um in your React project.
+---
+
+## Prerequisites
+
+- A React project (Next.js, Vite, Remix)
+- Tailwind CSS v4
+- TypeScript (recommended)
+
+## Initialize Thu'um
+
+Run the init command in your project root:
+
+```bash
+npx thuum init
+```
+
+This will:
+
+1. Detect your framework and package manager
+2. Create a `thuum.json` config file
+3. Add the `cn()` utility to `src/lib/utils.ts`
+4. Inject Skyrim-themed design tokens into your CSS
+
+## Add Components
+
+```bash
+npx thuum add button
+npx thuum add card
+npx thuum add input
+```
+
+Each command fetches the component source, resolves dependencies, and writes files to your project.
+
+## List Available Components
+
+```bash
+npx thuum list
+```
+
+## Configuration
+
+The `thuum.json` file controls where components are placed:
+
+```json
+{
+  "tsx": true,
+  "aliases": {
+    "components": "@/components",
+    "ui": "@/components/ui",
+    "lib": "@/lib",
+    "hooks": "@/hooks"
+  },
+  "registryUrl": "https://thuum.dev/r"
+}
+```
