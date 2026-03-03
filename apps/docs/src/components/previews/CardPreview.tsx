@@ -1,5 +1,6 @@
 import {
   Card,
+  CardCorners,
   CardHeader,
   CardTitle,
   CardDescription,
@@ -11,21 +12,19 @@ import { Button } from "../ui/button";
 export function CardPreview() {
   return (
     <Card className="w-full max-w-sm">
+      <CardCorners />
       <CardHeader>
-        <CardTitle>Dragonborn's Quest</CardTitle>
-        <CardDescription>
-          A new quest has been added to your journal.
-        </CardDescription>
+        <CardTitle>Illusion: Muffle</CardTitle>
+        <CardDescription>Spell Tome</CardDescription>
       </CardHeader>
       <CardContent>
-        <p className="text-sm text-[oklch(0.65_0.01_80)]">
-          Travel to High Hrothgar and speak with the Greybeards to learn the Way
-          of the Voice.
+        <p className="text-sm text-muted-foreground">
+          You move more quietly for 180 seconds.
         </p>
       </CardContent>
-      <CardFooter className="gap-2">
-        <Button>Accept</Button>
-        <Button variant="outline">Decline</Button>
+      <CardFooter className="gap-4">
+        <Button variant="primary">Use</Button>
+        <Button>Drop</Button>
       </CardFooter>
     </Card>
   );

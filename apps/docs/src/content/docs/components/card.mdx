@@ -22,6 +22,7 @@ import InstallCommand from "../../../components/InstallCommand.astro";
 ```tsx
 import {
   Card,
+  CardCorners,
   CardHeader,
   CardTitle,
   CardDescription,
@@ -32,6 +33,7 @@ import {
 export function MyComponent() {
   return (
     <Card>
+      <CardCorners />
       <CardHeader>
         <CardTitle>Quest Log</CardTitle>
         <CardDescription>Your active quests</CardDescription>
@@ -49,11 +51,12 @@ export function MyComponent() {
 
 ## Sub-components
 
-| Component         | Description                          |
-| ----------------- | ------------------------------------ |
-| `Card`            | Root container                       |
-| `CardHeader`      | Top section with title/description   |
-| `CardTitle`       | Heading text                         |
-| `CardDescription` | Secondary description text           |
-| `CardContent`     | Main content area                    |
-| `CardFooter`      | Bottom section for actions           |
+| Component         | Description                                          |
+| ----------------- | ---------------------------------------------------- |
+| `Card`            | Root container with top corner ornaments              |
+| `CardCorners`     | Adds bottom corner ornaments (place as first child)   |
+| `CardHeader`      | Top section with title/description                   |
+| `CardTitle`       | Heading text (uppercase, tracked)                    |
+| `CardDescription` | Secondary description text                           |
+| `CardContent`     | Main content area                                    |
+| `CardFooter`      | Bottom section with top border for actions            |

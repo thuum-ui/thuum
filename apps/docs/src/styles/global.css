@@ -1,26 +1,62 @@
 @import "tailwindcss";
 
 @theme {
-  --color-background: oklch(0.14 0.004 285);
-  --color-foreground: oklch(0.93 0.01 80);
-  --color-muted: oklch(0.22 0.006 285);
-  --color-muted-foreground: oklch(0.65 0.01 80);
-  --color-card: oklch(0.17 0.005 285);
-  --color-card-foreground: oklch(0.93 0.01 80);
-  --color-primary: oklch(0.68 0.12 55);
-  --color-primary-foreground: oklch(0.14 0.004 285);
-  --color-secondary: oklch(0.25 0.008 285);
-  --color-secondary-foreground: oklch(0.93 0.01 80);
-  --color-accent: oklch(0.55 0.15 30);
-  --color-accent-foreground: oklch(0.93 0.01 80);
-  --color-destructive: oklch(0.55 0.2 25);
-  --color-destructive-foreground: oklch(0.93 0.01 80);
-  --color-border: oklch(0.3 0.01 285);
-  --color-input: oklch(0.25 0.008 285);
-  --color-ring: oklch(0.68 0.12 55);
-  --radius-sm: 0.125rem;
-  --radius-md: 0.375rem;
-  --radius-lg: 0.5rem;
-  --radius-xl: 0.75rem;
-  --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
+  /*
+   * Skyrim UI palette — monochromatic grayscale.
+   * The in-game UI uses white text on near-black translucent panels
+   * with thin light-gray borders. No saturated accent colors.
+   */
+  --color-background: oklch(0.08 0 0);
+  --color-foreground: oklch(0.92 0 0);
+
+  --color-muted: oklch(0.15 0 0);
+  --color-muted-foreground: oklch(0.55 0 0);
+
+  --color-card: oklch(0.08 0 0 / 0.85);
+  --color-card-foreground: oklch(0.92 0 0);
+
+  --color-popover: oklch(0.1 0 0 / 0.9);
+  --color-popover-foreground: oklch(0.92 0 0);
+
+  /* Primary = bright white (selected / active state) */
+  --color-primary: oklch(0.95 0 0);
+  --color-primary-foreground: oklch(0.08 0 0);
+
+  /* Secondary = dim gray (unselected / inactive) */
+  --color-secondary: oklch(0.18 0 0);
+  --color-secondary-foreground: oklch(0.65 0 0);
+
+  --color-accent: oklch(0.2 0 0);
+  --color-accent-foreground: oklch(0.92 0 0);
+
+  --color-destructive: oklch(0.5 0.15 25);
+  --color-destructive-foreground: oklch(0.92 0 0);
+
+  /* Borders: the thin light-gray lines from the UI panels */
+  --color-border: oklch(0.45 0 0);
+  --color-input: oklch(0.12 0 0);
+  --color-ring: oklch(0.7 0 0);
+
+  /* No rounded corners — Skyrim UI is all sharp geometry */
+  --radius-sm: 0;
+  --radius-md: 0;
+  --radius-lg: 0;
+  --radius-xl: 0;
+
+  /*
+   * Font: Skyrim uses Futura Condensed Medium throughout its UI.
+   * Prefer the exact face, then condensed geometric fallbacks.
+   */
+  --font-sans: "Futura Condensed", "Futura PT Condensed", "Rajdhani",
+    "Arial Narrow", ui-sans-serif, system-ui, sans-serif;
+}
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+
+  body {
+    @apply bg-background text-foreground antialiased font-medium;
+  }
 }
