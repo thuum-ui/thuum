@@ -10,10 +10,10 @@
   },
   "dependencies": {
     "astro": "^5.4.0",
-    "@astrojs/starlight": "^0.33.0",
+    "@astrojs/starlight": "^0.37.0",
     "@astrojs/mdx": "^4.2.0",
     "@astrojs/react": "^4.2.0",
-    "@astrojs/starlight-tailwind": "^3.0.0",
+    "@astrojs/starlight-tailwind": "^4.0.0",
     "@tailwindcss/vite": "^4.0.0",
     "tailwindcss": "^4.0.0",
     "react": "^19.0.0",
@@ -22,7 +22,7 @@
     "clsx": "^2.1.0",
     "tailwind-merge": "^3.0.0",
     "@radix-ui/react-slot": "^1.1.0",
-    "sharp": "^0.33.0"
+    "sharp": "^0.34.0"
   },
   "devDependencies": {
     "@types/react": "^19.0.0",
